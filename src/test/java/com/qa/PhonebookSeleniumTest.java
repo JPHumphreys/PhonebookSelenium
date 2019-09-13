@@ -61,6 +61,7 @@ public class PhonebookSeleniumTest {
     public void editContact() throws InterruptedException {
         WebElement editBtn = driver.findElementById("edit-contact-btn");
         editBtn.click();
+        //comment
         Thread.sleep(3000);
     }
 
