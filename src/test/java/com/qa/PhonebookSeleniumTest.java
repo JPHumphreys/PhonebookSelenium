@@ -3,6 +3,7 @@ package com.qa;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -33,6 +34,15 @@ public class PhonebookSeleniumTest {
     public void tearDown(){
         driver.close();
     }
+
+    @Test
+    public void firstTest() throws InterruptedException {
+
+        driver.manage().window().maximize();
+        driver.get("http://localhost:5500/");
+        Thread.sleep(2000);
+    }
+
 
 
 
