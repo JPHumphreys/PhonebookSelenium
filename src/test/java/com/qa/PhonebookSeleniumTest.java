@@ -23,13 +23,12 @@ public class PhonebookSeleniumTest {
     public void setUp(){
         System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\Documents\\testing2\\src\\test\\java\\resources\\chromedriver.exe");
 
+
         driver = new ChromeDriver();
 
         js = (JavascriptExecutor) driver;
 
         action = new Actions (driver);
-
-    //delete this
 
     }
 
@@ -44,10 +43,6 @@ public class PhonebookSeleniumTest {
         driver.manage().window().maximize();
         driver.get("http://localhost:5500/");
         Thread.sleep(2000);
-
-        createContactButtonTest();
-        removeCreateContactMenu();
-        searchContactButtonTest();
 
     }
 
@@ -85,7 +80,24 @@ public class PhonebookSeleniumTest {
         Thread.sleep(1000);
 
         assertTrue(searchMenu.getAttribute("style").equals("display: block;"));
+
     }
+
+    @Test
+    public void createContact(){
+
+    }
+
+
+
+    @Test
+    public void editContact() throws InterruptedException {
+        WebElement editBtn = driver.findElementById("edit-contact-btn");
+        editBtn.click();
+        //comment
+        Thread.sleep(3000);
+    }
+
 
 
 
