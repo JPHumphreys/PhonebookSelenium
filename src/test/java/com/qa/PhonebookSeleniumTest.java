@@ -41,6 +41,7 @@ public class PhonebookSeleniumTest {
         driver.manage().window().maximize();
         driver.get("http://localhost:5500/");
         Thread.sleep(2000);
+        //test
     }
 
 
