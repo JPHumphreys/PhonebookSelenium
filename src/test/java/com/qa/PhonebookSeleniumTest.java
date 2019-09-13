@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -19,6 +20,7 @@ public class PhonebookSeleniumTest {
     @Before
     public void setUp(){
         System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\IdeaProjects\\PhonebookSelenium\\src\\test\\java\\resources\\chromedriver.exe");
+
 
         driver = new ChromeDriver();
 
@@ -44,7 +46,25 @@ public class PhonebookSeleniumTest {
         driver.get("http://localhost:5500/");
         Thread.sleep(2000);
         //test
+        //createContact();
+        editContact();
     }
+
+    @Test
+    public void createContact(){
+
+    }
+
+
+
+    @Test
+    public void editContact() throws InterruptedException {
+        WebElement editBtn = driver.findElementById("edit-contact-btn");
+        editBtn.click();
+        //comment
+        Thread.sleep(3000);
+    }
+
 
 
 
